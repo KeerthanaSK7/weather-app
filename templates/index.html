@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Weather App</h1>
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off">
+            <button onclick="getWeather()">Search</button>
+        </div>
+        
+        <div id="loading" class="loading" style="display:none;">Loading...</div>
+        <div id="error" class="error" style="display:none;"></div>
+        
+        <div id="weatherContainer" class="weather-container" style="display:none;">
+            <div class="location">
+                <h2 id="cityName"></h2>
+                <p id="country"></p>
+            </div>
+            
+            <div class="weather-main">
+                <img id="weatherIcon" src="" alt="weather icon">
+                <div class="temp-info">
+                    <span id="temperature" class="temperature"></span>
+                    <span id="description" class="description"></span>
+                </div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-card">
+                    <p class="label">Feels Like</p>
+                    <p id="feelsLike" class="value"></p>
+                </div>
+                <div class="detail-card">
+                    <p class="label">Humidity</p>
+                    <p id="humidity" class="value"></p>
+                </div>
+                <div class="detail-card">
+                    <p class="label">Wind Speed</p>
+                    <p id="windSpeed" class="value"></p>
+                </div>
+                <div class="detail-card">
+                    <p class="label">Pressure</p>
+                    <p id="pressure" class="value"></p>
+                </div>
+                <div class="detail-card">
+                    <p class="label">Cloudiness</p>
+                    <p id="clouds" class="value"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
