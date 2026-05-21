@@ -126,3 +126,7 @@ python app.py
 
 This project is open source and available under the MIT License.
 
+
+\## SCREENSHOT OF WEBSITE
+<img width="1910" height="1069" alt="Screenshot 2026-05-21 122613" src="https://github.com/user-attachments/assets/6d3a7daf-2e79-4fd1-b046-dfd3b849961e" />
+
